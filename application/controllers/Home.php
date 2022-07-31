@@ -7,4 +7,8 @@ class Home extends CI_Controller
 	{
 		echo 'home/index';
 	}
+	public function about()
+	{
+		echo 'home/about';
+	}
 }
