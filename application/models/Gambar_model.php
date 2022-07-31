@@ -1,7 +1,7 @@
 <?php
-class Modelcrud extends CI_Model
+class Gambar_model extends CI_Model
 {
-  Private $table = 'users';
+  Private $table = 'gambar';
 
   public function get()
   {

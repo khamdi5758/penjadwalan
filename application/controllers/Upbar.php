@@ -6,7 +6,7 @@ class Upbar extends CI_Controller {
   public function __construct()
   {
       parent::__construct();
-      $this->load->model('modelcrud');
+      $this->load->model('gambar_model');
       $this->load->library('upload');
       $this->load->library('pagination');
   }
@@ -14,7 +14,7 @@ class Upbar extends CI_Controller {
   // fungsi untuk mengambil data
 	public function index()
 	{
-      $data['users'] = $this->modelcrud->get();
+      $data['users'] = $this->gambar_model->get();
   		$this->load->view('upbar/home',$data);
 	}
 
@@ -48,7 +48,7 @@ class Upbar extends CI_Controller {
                             'foto'       => $foto['file_name'],
 	                          'alamat'     => $alamat,
 	                        );
-							$this->modelcrud->insert($data);
+							$this->gambar_model->insert($data);
               redirect('');
 	        }else {
               die("gagal upload");
@@ -66,7 +66,7 @@ class Upbar extends CI_Controller {
       @unlink($path.$foto);
 
       $where = array('id' => $id );
-      $this->modelcrud->delete($where);
+      $this->gambar_model->delete($where);
       return redirect('');
   }
 
@@ -75,7 +75,7 @@ class Upbar extends CI_Controller {
   {
       $kondisi = array('id' => $id );
 
-      $data['data'] = $this->modelcrud->get_by_id($kondisi);
+      $data['data'] = $this->gambar_model->get_by_id($kondisi);
       return $this->load->view('upbar/edit_data',$data);
   }
 
@@ -111,7 +111,7 @@ class Upbar extends CI_Controller {
               // hapus foto pada direktori
               @unlink($path.$this->input->post('filelama'));
 
-							$this->modelcrud->update($data,$kondisi);
+							$this->gambar_model->update($data,$kondisi);
               redirect('');
 	        }else {
               die("gagal update");
