@@ -12,7 +12,7 @@
     <div class="container">
         <h1><center>Daftar jadwal</center></h1>
       <table class="table table-striped" border="1px">
-      <a href="<?php echo base_url('guru/add/') ?>"> add</a>
+      <a href="<?php echo base_url('jadwal/add/') ?>"> add</a>
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -41,8 +41,8 @@
             <td><?php echo $row->kelas;?></td>
             <td><?php echo $row->ruang;?></td>
             <td>
-			    <a href="<?php echo base_url('guru/edit/'.$row->nip) ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-				<a onclick="deleteConfirm('<?php echo base_url('guru/delete/'.$row->nip) ?>')" href="<?php echo base_url('guru/delete/'.$row->nip) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+			    <a href="<?php echo base_url('jadwal/edit/'.$row->nip) ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+				<a onclick="deleteConfirm('<?php echo base_url('jadwal/delete/'.$row->nip) ?>')" href="<?php echo base_url('guru/delete/'.$row->nip) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
             </td>
           </tr>
         <?php endforeach;?>

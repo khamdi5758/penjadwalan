@@ -50,7 +50,7 @@ class Jadwal_model extends CI_Model{
 
     public function getjadwalById($id)
     {
-        return $this->db->get_where($this->table, ["id_jadwal" => $id])->row();
+        return $this->db->get_where($this->table2, ["id_jadwal" => $id])->row();
     }
 
     public function getjadwalByguru($id)
@@ -86,7 +86,7 @@ class Jadwal_model extends CI_Model{
     public function save()
     {
         $post = $this->input->post();
-        $this->idjadwal = $post["id_jadwal"];
+        $this->id_jadwal = $post["id_jadwal"];
         $this->nipguru= $post["nipguru"];
         $this->kd_mapel = $post["kd_mapel"];
         $this->hari = $post["hari"];
