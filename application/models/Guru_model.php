@@ -10,7 +10,7 @@ class Guru_model extends CI_Model{
 
             ['field' => 'nip',
             'label' => 'nip',
-            'rules' => 'numeric'],
+            'rules' => 'required'],
             
             ['field' => 'nama_guru',
             'label' => 'nama_guru',

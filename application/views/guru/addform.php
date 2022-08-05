@@ -14,7 +14,7 @@
 						<form action="<?php echo base_url('guru/add') ?>" method="post" enctype="multipart/form-data" >
                                 <label for="nip">nip</label>
 								<input class="form-control <?php echo form_error('nip') ? 'is-invalid':'' ?>"
-								 type="number" name="nip" min="0" />
+								 type="number" name="nip" />
 									<?php echo form_error('nip') ?>
 							
 
